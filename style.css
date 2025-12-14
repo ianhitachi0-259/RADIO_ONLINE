@@ -1,0 +1,83 @@
+body{
+  background:#000;
+  color:#0f0;
+  font-family:Arial, sans-serif;
+  text-align:center;
+  padding-top:40px;
+  margin:0;
+}
+
+h1{
+  font-size:28px;
+  text-shadow:0 0 12px #0f0;
+  margin-bottom:20px;
+}
+
+select{
+  width:260px;
+  padding:10px;
+  margin:6px 0;
+  font-weight:bold;
+  background:#ffee00;
+  border:none;
+  border-radius:8px;
+}
+
+.controls{
+  margin-top:15px;
+}
+
+.playBtn{
+  background:#1aff00;
+  color:#000;
+  font-weight:bold;
+  padding:10px 22px;
+  border:none;
+  border-radius:8px;
+  box-shadow:0 0 12px #1aff00;
+  cursor:pointer;
+}
+
+.muteBtn{
+  background:yellow;
+  padding:10px 22px;
+  border:none;
+  border-radius:8px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.stopBtn{
+  background:red;
+  color:white;
+  padding:10px 22px;
+  border:none;
+  border-radius:8px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:active{
+  transform:scale(1.1);
+}
+
+.volumeBox{
+  margin-top:12px;
+}
+
+#signalBar{
+  width:200px;
+  height:15px;
+  background:#111;
+  border-radius:10px;
+  margin:15px auto;
+  overflow:hidden;
+  box-shadow:0 0 10px #0f0;
+}
+
+#signalFill{
+  width:0%;
+  height:100%;
+  background:#00ff00;
+  transition:width 0.05s linear;
+}
