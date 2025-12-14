@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Radio IAN HITACHI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>🎵 Radio IAN HITACHI 🎵</h1>
+
+<!-- PILIH GENRE -->
+<select id="genreSelect">
+  <option value="">🎧 Pilih Genre</option>
+  <option value="slow">Slow Memory Indonesia</option>
+  <option value="dangdut">Dangdut</option>
+  <option value="barat">Evergreen Barat</option>
+  <option value="rohani">Rohani</option>
+</select>
+
+<!-- PILIH STASIUN -->
+<select id="stationSelect">
+  <option value="">📡 Pilih Stasiun</option>
+</select>
+
+<!-- AUDIO -->
+<audio id="player"></audio>
+
+<!-- KONTROL -->
+<div class="controls">
+  <button class="playBtn" id="playBtn">▶ PLAY</button>
+  <button class="muteBtn" id="muteBtn">🔇 MUTE</button>
+  <button class="stopBtn" id="stopBtn">⏹ STOP</button>
+</div>
+
+<!-- VOLUME -->
+<div class="volumeBox">
+  🔊 <input type="range" id="volumeControl" min="0" max="1" step="0.01">
+</div>
+
+<!-- SIGNAL -->
+<div id="signalBar">
+  <div id="signalFill"></div>
+</div>
+
+<!-- MARQUEE -->
+<marquee bgcolor="red" style="color:yellow;" direction="left" width="200">
+<b>&lt;&lt; IAN HITACHI &gt;&gt;</b>
+</marquee>
+
+<marquee bgcolor="red" style="color:yellow;" direction="right" width="200">
+<b>&lt;&lt; IAN HITACHI &gt;&gt;</b>
+</marquee>
+
+<script src="script.js"></script>
+</body>
+</html>
