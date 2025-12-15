@@ -50,6 +50,55 @@
         <source src="https://stream.zeno.fm/wvq442iwm6ztv" type="audio/mpeg">
     </audio>
 </div>
+<script>
+const mini = document.getElementById("miniPlayer");
+
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+
+// Mouse (Desktop)
+mini.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  offsetX = e.clientX - mini.offsetLeft;
+  offsetY = e.clientY - mini.offsetTop;
+  mini.style.cursor = "grabbing";
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+  mini.style.left = e.clientX - offsetX + "px";
+  mini.style.top = e.clientY - offsetY + "px";
+  mini.style.right = "auto";
+  mini.style.bottom = "auto";
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+  mini.style.cursor = "grab";
+});
+
+// Touch (HP)
+mini.addEventListener("touchstart", (e) => {
+  const touch = e.touches[0];
+  isDragging = true;
+  offsetX = touch.clientX - mini.offsetLeft;
+  offsetY = touch.clientY - mini.offsetTop;
+});
+
+document.addEventListener("touchmove", (e) => {
+  if (!isDragging) return;
+  const touch = e.touches[0];
+  mini.style.left = touch.clientX - offsetX + "px";
+  mini.style.top = touch.clientY - offsetY + "px";
+  mini.style.right = "auto";
+  mini.style.bottom = "auto";
+});
+
+document.addEventListener("touchend", () => {
+  isDragging = false;
+});
+</script>
 
 </body>
 </html>
